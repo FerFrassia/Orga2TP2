@@ -1,0 +1,12 @@
+rgb-yuv / yuv-rgb:
+/ver alguna cosa con floats vs enteros
+/mascaras adentro y afuera del ciclo
+
+zoom: /loop unrolling
+
+fourCombine:
+/comparamos nuestra version de c con la version de asm. Si no existe una diferencia considerable de tiempo podemos suponer que es porque la mayor parte del tiempo es de la escritura en memoria. Podemos intentar hacer el de asm acumulando datos y mandandolos de a 4 en vez de a 2, y ahi tendria que mejorar bastante.
+
+max close:
+/pintar todos los bordes primero vs pintarlos en cada ciclo
+/ir haciendo imagenes de doble de ancho y medir cuanto tarda. Vamos a ver que en un momento va a empezar a empeorar la performance porque no alcanza la cache.
